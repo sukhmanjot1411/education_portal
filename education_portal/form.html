@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDUCATION PORTAL</title>
+    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!--Header section starts-->
+    <header>
+        
+        <label for="toggler" class="fas fa-bars"></label>
+        <a href="#" class="logo"> EDUCATION <span></span></a>
+        
+        
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#course">Course</a>
+            <a href="#contact">Contact</a>
+            <a href="indexx.html" >LOGIN/REGISTER</a>
+        </nav>
+     
+    </header>
+     <!--Header section ends-->
+
+
+     <!--Home section starts-->
+     <section class="home" id="home">
+        <div class="content">
+            <h3>Edu Institute</h3>
+            <b><span>Worlds Best University</span></b>
+            <p>                                                                                                                                      </p>
+            <a href="#course" class="btn"> Click to know more</a>
+        </div>
+     </section>
+
+
+    <!--Home section ends-->
+
+
+  <!--About section starts-->
+<section class="about" id="about">
+    <h1 class="heading"><span>about</span> us</h1>
+    <div class="row">
+        <div class="video-container">
+        
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/7O-fkdhhPPw?si=8HQMcANSyuS6DTn0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <h3>best campus worldwide</h3>
+        </div>
+        <div class="content">
+            <h3>why choose us?</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda nam cumque quasi autem blanditiis eaque laboriosam, neque alias sequi! Minus voluptatem expedita incidunt amet vel repellendus rem nisi minima animi?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit quo illum perferendis sapiente iusto distinctio! Esse maxime laborum vero, eligendi, sint impedit nulla fugit fugiat qui harum sapiente natus cum.</p>
+            <a href="#" class="btn">Learn More</a>
+
+        </div>
+    </div>
+</section>
+
+  <!--About section ends-->
+    
+
+
+
+    <!-- Contact section starts -->
+    <section class="contact" id="contact">
+        <h1 class="heading"><span>contact</span> us</h1>
+        <div class="row">
+            <form action="/submit-contact-form" method="post" id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name" class="box" placeholder="Your Name">
+                <span id="nameError" class="error-message"></span>
+
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" class="box" placeholder="Your Email">
+                <span id="emailError" class="error-message"></span>
+
+                <label for="regd_no">Registration number:</label>
+                <input type="text" id="regd_no" name="regd_no" class="box" placeholder="Your 9 digit regd_no">
+                <span id="regdNoError" class="error-message"></span>
+
+                <label for="phoneNumber">Phone Number:</label>
+                <input type="text" name="phoneNumber" id="phoneNumber" maxlength="10" class="box" placeholder="Your Phone Number" pattern="[0-9]{10}" title="Please enter a 10-digit phone number">
+                <span id="phoneNumberError" class="error-message"></span>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" class="box" placeholder="Your Message" cols="30" rows="6"></textarea>
+
+                <label for="branch">Branch:</label>
+                <select name="branch" id="branch" class="box">
+                    <option value="cse">CSE</option>
+                    <option value="coe">COE</option>
+                    <option value="ece">ECE</option>
+                    <option value="eee">EEE</option>
+                    <option value="mech">MECH</option>
+                    <option value="civil">CIVIL</option>
+                </select>
+                <button id="buttonsub" type="submit">Submit</button>
+            </form>
+            <div class="image">
+                <img src="garden.jpeg" alt="" style="height: 460px; width: 603px;">
+            </div>
+        </div>
+    </section>
+    <!-- Contact section ends -->
+
+    <!-- Footer section starts -->
+    <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="#home">home</a>
+                <a href="#about">about</a>
+                <a href="#course">course</a>
+                <a href="#contact">contact</a>
+            </div>
+            <div class="box">
+                <h3>Extra links</h3>
+                <a href="D:\neew\sem 5\TA\JavaScript-LMS-main\JavaScript-LMS-main\index.html">my account</a>
+            </div>
+            <div class="box">
+                <h3>Locations</h3>
+                <a href="#">india</a>
+                <a href="#">Derra Bassi</a>
+            </div>
+            <div class="box">
+                <h3>contact info</h3>
+                <a href="#">+123-696-7890</a>
+                <a href="#">thapar@gmail.com</a>
+                <a href="#">Patiala - 147001</a>
+            </div>
+        </div>
+    </section>
+    <!-- Footer section ends -->
+
+    <script>
+        const form = document.getElementById('contactForm');
+        form.addEventListener('submit', function(event) {
+            const name = document.getElementById('name');
+            const email = document.getElementById('email');
+            const regdNo = document.getElementById('regd_no');
+            const phoneNumber = document.getElementById('phoneNumber');
+
+            if (name.value.trim() === '') {
+                document.getElementById('nameError').textContent = 'Name is required';
+                event.preventDefault();
+            } else {
+                document.getElementById('nameError').textContent = '';
+            }
+
+            if (email.value.trim() === '') {
+                document.getElementById('emailError').textContent = 'Email is required';
+                event.preventDefault();
+            } else {
+                document.getElementById('emailError').textContent = '';
+            }
+
+            if (regdNo.value.trim() === '') {
+                document.getElementById('regdNoError').textContent = 'Registration number is required';
+                event.preventDefault();
+            } else {
+                document.getElementById('regdNoError').textContent = '';
+            }
+
+            if (phoneNumber.value.trim() === '') {
+                document.getElementById('phoneNumberError').textContent = 'Phone number is required';
+                event.preventDefault();
+            } else if (!/^\d{10}$/.test(phoneNumber.value.trim())) {
+                document.getElementById('phoneNumberError').textContent = 'Invalid phone number';
+                event.preventDefault();
+            } else {
+                document.getElementById('phoneNumberError').textContent = '';
+            }
+        });
+    </script>
+</body>
+</html>
